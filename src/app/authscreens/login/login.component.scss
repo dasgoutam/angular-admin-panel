@@ -1,0 +1,76 @@
+@import "../../../shared/variables";
+
+.login-component {
+  color: $primary-color;
+  background-color: $background-color-primary;
+  height: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.container-login {
+    height: 600px;
+    width: 40%;
+    // background-color: $background-color-secondary;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    ::ng-deep .mat-tab-label {
+        // color: $secondary-color;
+    }
+    mat-tab-group {
+        margin-top: 50px;
+    }
+
+}
+
+.login-space {
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // color: $primary-color;
+    }
+    mat-form-field:nth-child(1) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    mat-raised-button {
+        color: $primary-color
+    }
+}
+
+input {
+    color: black;
+}
+
+.signup-space {
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    select {
+        color: black;
+    }
+}
+
+::ng-deep .mat-form-field-placeholder{
+    color:red !important;
+  } 
+
+@media (max-width: 600px) { 
+    .container-login {
+        width: 90%;
+    }
+ }
+ 
+ @media (max-width: 900px) and (min-width: 600px) {
+    .container-login {
+        width: 70%;
+    }
+ }

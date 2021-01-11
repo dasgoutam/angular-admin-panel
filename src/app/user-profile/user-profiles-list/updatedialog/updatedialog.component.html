@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="updateForm" (ngSubmit)="update()" novalidate>
+        <div class="signup-form">
+          <mat-form-field>
+            <input matInput placeholder="Email (Primary field)" formControlName="email" readonly>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password">    
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <select matNativeControl required formControlName="type">
+              <option value="student">Admin</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="address">    
+          </mat-form-field>
+
+          <button [disabled]="!updateForm.valid" mat-raised-button color="primary" mat-button>Update</button>
+        </div>
+    </form>
+</div>

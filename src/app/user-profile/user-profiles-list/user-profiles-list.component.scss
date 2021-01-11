@@ -1,0 +1,25 @@
+@import "../../../shared/variables";
+
+.user-list {
+  color: $primary-color;
+  background-color: $background-color-primary;
+  height: 100%;
+  padding: 40px 20px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+  padding: 60px 20px;
+}
+
+table {
+    width: 100%;
+    background-color: $background-color-secondary;
+    
+    ::ng-deep .mat-cell {
+        color: $primary-color;
+    } 
+
+    ::ng-deep .mat-header-cell {
+        color: $secondary-color;
+    } 
+}

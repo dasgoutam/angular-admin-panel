@@ -1,0 +1,56 @@
+@import "../../../shared/variables";
+
+.profile-page {
+    color: $primary-color;
+    background-color: #15161B;
+    height: 100%;
+    padding: 40px 20px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+mat-grid-tile {
+    background-color: #202029;
+
+    mat-grid-tile-header {
+        background-color:#1299DD;
+    }
+
+    h1 {
+        color: $secondary-color;
+        margin-top: 30px;
+    }
+}
+
+.widget, .widget-sm {
+    height: 200px;
+    background-color: #202029;
+}
+
+#aboutme {
+    background-color: #03A9F4;
+    color: white;
+    line-height: 20px;
+    letter-spacing: 00.25px;
+    mat-grid-tile-header {
+    background-color: #03A9F4;
+    }
+    p {
+        padding: 20px;
+    }
+}
+
+#second {
+    background-color: #FFA000;
+    color: white;
+    line-height: 20px;
+    letter-spacing: 00.25px;
+    mat-grid-tile-header {
+    background-color: #FFA000;
+    }
+    p {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,66 @@
+<div class="login-component">
+
+    <div class="container-login">
+        <mat-tab-group>
+            <mat-tab label="Login"> 
+                <div class="login-space">
+                    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" novalidate>
+                        <div class="login-form">
+                          <mat-form-field>
+                            <input matInput placeholder="Email" formControlName="email">
+                          </mat-form-field>
+                      
+                          <mat-form-field>
+                            <input matInput type="password" placeholder="Password (Anything works for the demo)" formControlName="password">    
+                          </mat-form-field>
+                      
+                          <button [disabled]="!loginForm.valid" mat-raised-button color="primary" mat-button>Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </mat-tab>
+            <mat-tab label="Signup">
+                <div class="signup-space">
+                    <form [formGroup]="signupForm" (ngSubmit)="submitSignup()" novalidate>
+                        <div class="signup-form">
+                          <mat-form-field>
+                            <input matInput placeholder="Name" formControlName="name">
+                          </mat-form-field>
+
+                          <mat-form-field>
+                            <input matInput placeholder="Email" formControlName="email">
+                          </mat-form-field>
+                      
+                          <mat-form-field>
+                            <input matInput type="password" placeholder="Password" formControlName="password">    
+                          </mat-form-field>
+                      
+                          <mat-form-field>
+                            <mat-label>Role</mat-label>
+                            <select matNativeControl required formControlName="type">
+                              <option value="admin">Admin</option>
+                              <option value="student">Student</option>
+                              <option value="teacher">Teacher</option>
+                            </select>
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="dob">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+
+                          
+                          <mat-form-field>
+                            <input matInput placeholder="Address" formControlName="address">    
+                          </mat-form-field>
+
+                          <button [disabled]="!signupForm.valid" mat-raised-button color="primary" mat-button>Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

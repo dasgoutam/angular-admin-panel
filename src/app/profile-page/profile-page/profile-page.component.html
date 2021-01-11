@@ -1,0 +1,45 @@
+<div class="profile-page">
+
+    <mat-grid-list #grid cols="2" rowHeight="2:1" [gutterSize]="'30px'">
+        <mat-grid-tile>
+            <h1>{{user_data.name}}</h1>
+            <!-- <div>{{user_data.email}}</div> -->
+            <mat-grid-tile-header>
+                Name
+            </mat-grid-tile-header>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <h1>{{salary | currency:'CAD':'symbol-narrow':'4.2-2'}}</h1>
+            <mat-grid-tile-header>
+                Salary (Using pipe)
+            </mat-grid-tile-header>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <h1>{{user_data.type}}</h1>
+            <mat-grid-tile-header>
+                Role
+            </mat-grid-tile-header>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <h1>{{ user_data.dob | date:"MM/dd/yy" }}</h1>
+            <mat-grid-tile-header>
+                Date (Using Pipe)
+            </mat-grid-tile-header>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <br>
+
+    <mat-grid-list #grid2 cols="5" rowHeight="1:1" [gutterSize]="'20px'">
+        <mat-grid-tile [colspan]="colspan1" id="aboutme">
+            <mat-grid-tile-header>
+                ABOUT ME !
+            </mat-grid-tile-header>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="colspan2" id="second">
+          <h1>Creating Opportunities</h1>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div> 
