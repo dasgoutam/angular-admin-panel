@@ -1,27 +1,20 @@
 # AdminPanel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Steps -
+1.Signup to create a new user.
+2.Login using the same email id (password not included in authentication for demo purposes)
 
-## Development server
+## Role - 
+1. Admin
+2. Non Admin (Student and Teacher)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Features-
+ - Users List and profile (CRUD)  - Separate Page
+ - Roles List (CRUD) - Separate Page
+ - Students/Teachers can access only their profile pages. - Added
+ - Routes should have lazy loading and should have auth guard based on Auth and roles both - Lazy loading added
+ - Login/Signup Screens. - Signup and login screens present
+ - The use of pipes/directives for displaying Dates and numbers. - Used in app.component
+ - The application should have separate modules for each component. - Added
+ - Please use Reactive forms and angular material. - Added
+ - UI should be aesthetic and Responsive
